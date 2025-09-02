@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SK Team 92 — 7 Step 3X Calculator</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f9; text-align: center; padding: 30px; }
+    .container { max-width: 450px; margin: auto; background: #fff; padding: 20px; border-radius: 15px; box-shadow: 0px 4px 10px rgba(0,0,0,0.2); }
+    input, button { padding: 10px; width: 80%; margin: 10px 0; border-radius: 8px; border: 1px solid #ccc; font-size: 16px; }
+    button { background: #4CAF50; color: white; font-weight: bold; cursor: pointer; }
+    button:hover { background: #45a049; }
+    .result { margin-top: 20px; text-align: left; }
+    .logo { font-size: 22px; font-weight: bold; color: #4CAF50; margin-bottom: 15px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">🌟 SK Team 92 🌟</div>
+    <h2>💰 7 Step 3X Plan Calculator</h2>
+
+    <input type="number" id="amount" placeholder="Enter your total amount (e.g. 11000)">
+    <button onclick="calculatePlan()">Get Plan</button>
+
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    function calculatePlan() {
+      let total = parseFloat(document.getElementById("amount").value);
+      if (isNaN(total) || total <= 0) {
+        alert("Please enter a valid amount!");
+        return;
+      }
+
+      // 3x 7-step series sum
+      let ratioSum = (Math.pow(3, 7) - 1) / (3 - 1);
+      let start = Math.floor(total / ratioSum);
+
+      if (start < 1) start = 1; // minimum starting amount = 1
+
+      let steps = [];
+      let current = start;
+      for (let i = 0; i < 7; i++) {
+        steps.push(current);
+        current *= 3;
+      }
+
+      let resultHTML = `<h3>Total Entered: ₹${total}</h3><h3>Your 7 Step Plan:</h3><ul>`;
+      steps.forEach((step, index) => {
+        resultHTML += `<li>Step ${index + 1}: ₹${step}</li>`;
+      });
+      resultHTML += "</ul>";
+      document.getElementById("result").innerHTML = resultHTML;
+    }
+  </script>
+</body>
+</html>
