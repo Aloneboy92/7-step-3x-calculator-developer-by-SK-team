@@ -45,9 +45,9 @@
         current *= 3;
       }
 
-      let resultHTML = `<h3>Total Entered: ₹${total}</h3><h3>Your 7 Step Plan:</h3><ul>`;
+      let resultHTML = `<h3>Total Entered: Rs${total}</h3><h3>Your 7 Step Plan:</h3><ul>`;
       steps.forEach((step, index) => {
-        resultHTML += `<li>Step ${index + 1}: ₹${step}</li>`;
+        resultHTML += `<li>Step ${index + 1}: Rs${step}</li>`;
       });
       resultHTML += "</ul>";
       document.getElementById("result").innerHTML = resultHTML;
