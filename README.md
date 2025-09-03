@@ -27,7 +27,7 @@
 </head>
 <body>
   <div class="container">
-    <div class="logo">🌟 SK Team 92 🌟</div>
+    <div class="logo">🌟 SK Team 87 🌟</div>
     <h2>💰 Multi-Amount 7 Step 3X Plan Calculator</h2>
 
     <input type="number" id="amount" placeholder="Enter your total amount (e.g. 1000 - 1000000)">
