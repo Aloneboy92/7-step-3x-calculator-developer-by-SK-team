@@ -13,7 +13,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>SK Team 92 — Multi Amount 7 Step Calculator</title>
+  <title>SK Team 87 — Multi Amount 7 Step Calculator</title>
   <style>
     body { font-family: Arial, sans-serif; background: #f0f2f5; text-align: center; padding: 30px; }
     .container { max-width: 550px; margin: auto; background: #fff; padding: 20px; border-radius: 15px; box-shadow: 0px 4px 10px rgba(0,0,0,0.2); }
